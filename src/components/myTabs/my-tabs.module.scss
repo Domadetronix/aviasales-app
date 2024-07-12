@@ -1,0 +1,19 @@
+.tabs {
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    height: 50px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+* {
+    font-size: inherit;
+}

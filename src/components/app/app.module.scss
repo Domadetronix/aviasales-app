@@ -1,0 +1,115 @@
+body {
+    background-color: #F3F7FA;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+    font-family: 'Open Sans';
+}
+
+.app {}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0 25px 0;
+}
+
+.main-content {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    gap: 20px;
+}
+
+
+.filters {
+    background-color: white;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #4A4A4A;
+    width: 232px;
+    padding-bottom: 10px;
+    height: fit-content;
+
+    &__item {
+        padding: 10px 20px;
+
+        &:hover {
+            background-color: #F1FCFF;
+        }
+    }
+}
+
+.filters-header {
+    margin: 20px 0 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.input-text {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.custom-checkbox+span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid rgba(154, 187, 206, 1);
+    border-radius: 2px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    box-sizing: border-box;
+}
+
+.custom-checkbox:checked+span::before {
+    border-color: rgba(33, 150, 243, 1);
+}
+
+.custom-checkbox:checked+span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 8px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 3px solid rgba(33, 150, 243, 1);
+    border-bottom: 3px solid rgba(33, 150, 243, 1);
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
