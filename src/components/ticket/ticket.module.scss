@@ -2,7 +2,7 @@ $blue: #2196F3;
 $light-gray: #A0B0B9;
 
 .ticket {
-    width: 400px;
+    width: 500px;
     padding: 20px;
     font-family: 'Open Sans';
     font-weight: 600;
@@ -23,7 +23,7 @@ $light-gray: #A0B0B9;
     }
 
     &__text {
-
+        width: 140px;
         letter-spacing: .5px;
 
         &_header {}
@@ -39,7 +39,7 @@ $light-gray: #A0B0B9;
 
     &__info {
         display: flex;
-        justify-content: space-between;
+        gap: 20px;
         margin-bottom: 10px;
 
         &_item {
