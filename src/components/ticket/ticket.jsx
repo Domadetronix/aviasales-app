@@ -4,6 +4,16 @@ import classes from './ticket.module.scss'
 
 export default function Ticket({ ticket, id }) {
   const { price, segments } = ticket
+  const logos = {
+    S7: 'https://pics.avs.io/99/36/S7.png',
+    AK: 'https://pics.avs.io/99/36/AK.png',
+    BT: 'https://pics.avs.io/99/36/BT.png',
+    DP: 'https://pics.avs.io/99/36/DP.png',
+    FV: 'https://pics.avs.io/99/36/FV.png',
+    U6: 'https://pics.avs.io/99/36/U6.png',
+    UT: 'https://pics.avs.io/99/36/UT.png',
+    W6: 'https://pics.avs.io/99/36/W6.png',
+  }
   const toTime = (value) => `${Math.ceil(value / 60)}ч ${value % 60}м`
   const convertTimeFormat = (value) => value.toString().padStart(2, '0')
   const travelTime = (initDate, duration) => {
@@ -17,6 +27,7 @@ export default function Ticket({ ticket, id }) {
         <div className={classes.ticket__price}>{price} Р</div>
         <div className={classes.ticket__company_name}>
           <img className={classes.ticket__company_logo} src="test-logo.png" alt="" />
+          <img className={classes.ticket__company_logo} src={logos[ticket.carrier]} alt="logo" />
         </div>
       </div>
       {segments.map((segment) => (
